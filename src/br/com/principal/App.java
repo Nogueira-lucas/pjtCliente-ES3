@@ -10,6 +10,6 @@ package br.com.principal;
  *
  * @author lucas
  */
-public class app {
+public class App {
     
 }

@@ -11,13 +11,15 @@ package br.com.dominio;
  */
 public class Cliente{
 
-    private Integer id;
-    private String nome;
-    private String cpf;
-    private String credito;
+    private Integer     id;
+    private String      nome;
+    private String      cpf;
+    private String      credito;
     
-    private Dependente dependente;
-    private Dependente dependente_op;
+    private Endereco    endereco;
+    
+    private Dependente  dependente;
+    private Dependente  dependente_op;
     
     public Cliente() {
     }
@@ -28,7 +30,17 @@ public class Cliente{
         this.cpf = cpf;
         this.credito = credito;
     }
-    
+
+    public Cliente(Integer id, String nome, String cpf, String credito, Endereco endereco, Dependente dependente, Dependente dependente_op) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.credito = credito;
+        this.endereco = endereco;
+        this.dependente = dependente;
+        this.dependente_op = dependente_op;
+    }
+   
     public Integer getId() {
         return id;
     }
@@ -77,6 +89,14 @@ public class Cliente{
         this.dependente_op = dependente_op;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+    
     public void salvar(){
         
     }
